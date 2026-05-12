@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | [Sara Melchionda]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #0984e3;
+            --bg: #ffffff;
+            --text-light: #636e72;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--accent);
+        }
+
+        h1 { font-weight: 600; font-size: 1.8rem; margin-bottom: 5px; }
+        p.subtitle { color: var(--accent); font-weight: 400; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+
+        .bio { color: var(--text-light); margin-bottom: 40px; font-size: 1rem; }
+
+        .links { display: flex; flex-direction: column; gap: 15px; }
+
+        .btn {
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+
+        footer { margin-top: 60px; font-size: 0.8rem; color: var(--text-light); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- <img src="foto.jpg" alt="Foto Profilo" class="profile-img"> -->
+        
+        <h1>[Sara Melchionda]</h1>
+        <p class="subtitle">[MA Candidate in Public and Political Communication | Graduate Researcher]</p>
+
+        <div class="bio">
+            <p>MA student specializing in Computational Social Science. My current research focuses on the communicative conflict between institutional discourse and anonymous online narratives, utilizing Large Language Models (LLMs) to decode sarcasm and conspiracy dynamics within digital communities.</p>
+        </div>
+
+        <div class="links">
+            <a href="cv-completo.pdf" class="btn btn-primary" target="_blank">📄 Scarica CV (PDF)</a>
+            <a href="https://www.linkedin.com/in/[TUO-PROFILO]" class="btn btn-outline">🔗 LinkedIn</a>
+            <a href="mailto:[sara.melchionda@edu.unito.it]" class="btn btn-outline">✉️ Contattami</a>
+        </div>
+
+        <footer>
+            &copy; 2024 [Sara Melchionda] • Disponibile per nuove opportunità
+        </footer>
+    </div>
+
+</body>
+</html>
