@@ -32,13 +32,26 @@
             border: 1px solid var(--line);
             box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
-        .header { margin-bottom: 40px; }
+        .header {
+            display: flex;
+            flex-direction: row; 
+            align-items: center;  
+            gap: 35px;          
+            margin-bottom: 45px;
+        }
         .profile-img {
-            width: 90px; height: 90px;
+            width: 150px;        
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 25px;
+            margin-bottom: 0;   
             border: 1px solid var(--line);
+            filter: grayscale(10%);
+            flex-shrink: 0;      
+        }
+        .header-text {
+            display: flex;
+            flex-direction: column;
         }
         h1 { 
             font-family: 'Playfair Display', serif;
@@ -91,15 +104,39 @@
             letter-spacing: 0.1em;
             text-align: center;
         }
+        @media (max-width: 500px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 40px 25px;
+            }
+            .header { 
+                flex-direction: column; /* Torna verticale su mobile */
+                align-items: flex-start; 
+                gap: 20px; 
+            }
+            .profile-img { 
+                width: 100px; 
+                height: 100px; 
+            }
+            h1 { 
+                font-size: 2.2rem; 
+            }
+            .nav-links {
+                grid-template-columns: 1fr; /* I pulsanti CV e Contact si impilano uno sull'altro */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <img src="IMG_2415.jpg" alt="Sara Melchionda" class="profile-img">
-            <h1>Sara Melchionda</h1>
-            <p class="tagline">Graduate Student | Public and Political Communication</p>
-        </header>
+    <img src="IMG_2415.jpg" alt="Sara Melchionda" class="profile-img">
+    <div class="header-text"> <h1>Sara Melchionda</h1>
+        <p class="tagline">MA Candidate | Prospective PhD Researcher</p>
+    </div>
+</header>
 
         <section class="abstract">
             <p>I am a Master’s degree student in <strong>Public and Political Communication</strong> at the University of Turin. My research investigates the intersection of digital sociology and NLP, specifically focusing on the detection of polarization and sarcasm within online conspiratorial discourse. My current thesis project explores whether polarization in online communities is a genuine social shift or a methodological artifact. I leverage <strong>LLMs </strong> to decode vernacular internet slang, using large-scale datasets retrieved from Reddit.</p>
